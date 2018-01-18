@@ -1,2 +1,12 @@
-@import './base/settings';
+@import './abstract/variables';
+
 @import './base/base';
+@import './base/settings';
+@import './base/typography';
+
+@import './components/button';
+@import './components/header';
+@import './components/home';
+@import './components/login';
+@import './components/main';
+@import './components/navbar';

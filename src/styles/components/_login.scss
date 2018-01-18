@@ -1,0 +1,39 @@
+.login-form {
+    background-color: $grey;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+
+    &__login-label {
+        display: block;
+        color: $color-primary;
+        margin-bottom: 1rem;
+        font-weight: bold
+    }
+
+    &__login-input {
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 0.5rem;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        padding: 1rem;
+    }
+
+    &__login-button {
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+    input[type=submit]:focus {
+        outline: none;
+    }
+
+    input:focus {
+        outline-color: $color-primary-light;
+    }
+}

@@ -1,1 +1,1 @@
-# React Boilerplate V1
+# Aplicacion para control de facturas v1

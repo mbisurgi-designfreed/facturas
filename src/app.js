@@ -11,7 +11,7 @@ import AppRouter from './routers/app.router';
 const store = configureStore();
 
 const app = (
-    <Provider store={store}>
+    <Provider store={store} >
         <AppRouter />
     </Provider>
 );
