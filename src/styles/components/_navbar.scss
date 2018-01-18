@@ -14,6 +14,11 @@
         text-transform: uppercase;
     }
 
+    &__nav-icon {
+        color: $color-accent;
+        margin-right: 0.8rem;
+    }
+
     &__nav-items {
         li {
             background-color: $color-primary-light;

@@ -8,7 +8,9 @@ const Header = ({ history }) => {
 
     return (
         <div className="header">
-            <button className="header__btn btn-link" onClick={onLogoutClicked}>Desloguearse</button>
+            <div className="header__btn-container">
+                <button className="btn-link" onClick={onLogoutClicked}>Desloguearse <i className="fa fa-sign-out"></i></button>
+            </div>
         </div>
     );
 }
