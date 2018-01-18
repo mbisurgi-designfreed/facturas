@@ -14,14 +14,14 @@ const Navbar = ({ history }) => {
         <div className="navbar">
             <ul>
                 <li>
-                    <p className="navbar__nav-title"><i class="fa fa-users navbar__nav-icon"></i>Clientes</p>
+                    <p className="navbar__nav-title"><i className="fa fa-users navbar__nav-icon"></i>Clientes</p>
                     <ul className="navbar__nav-items">
                         <li><a onClick={onClientesListarClicked}>Listar</a></li>
                         <li><a onClick={onClientesAddClicked}>Agregar</a></li>
                     </ul>
                 </li>
                 <li>
-                    <p className="navbar__nav-title"><i class="fa fa-file-text navbar__nav-icon"></i>Facturacion</p>
+                    <p className="navbar__nav-title"><i className="fa fa-file-text navbar__nav-icon"></i>Facturacion</p>
                     <ul className="navbar__nav-items">
                         <li><a >Listar</a></li>
                         <li><a >Facturar</a></li>

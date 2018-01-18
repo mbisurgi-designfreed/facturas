@@ -1,10 +1,9 @@
 import React from 'react';
 
 const ClientesList = () => {
-    return(
+    return (
         <div>
-        <p className="main__page-title">CLIENTES / listar</p>
-           Clientes
+            <p className="main__page-title">CLIENTES / listar</p>
         </div>
     )
 };

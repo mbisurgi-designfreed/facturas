@@ -7,9 +7,7 @@ import Main from './main.component';
 const Dashboard = () => {
     return(
         <div>
-            <Header />
-            <Navbar /> 
-            <Main />
+            <p className="main__page-title">DASHBOARD</p>
         </div>
     )
 };
