@@ -16,3 +16,9 @@ body {
 .row {
     max-width: 1140px;
 }
+
+.main-layout {
+    width: 100%;
+
+    @include clearfix;
+}

@@ -5,11 +5,13 @@ import Navbar from '../components/navbar.component';
 import Main from '../components/main.component';
 
 const MainLayout = () => {
-    return(
+    return (
         <div>
             <Header />
-            <Navbar /> 
-            <Main />
+            <div class="main-layout">
+                <Navbar />
+                <Main />
+            </div>
         </div>
     )
 };

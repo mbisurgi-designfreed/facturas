@@ -1,6 +1,6 @@
 .navbar {
     height: 95vh;
-    width: 10%;
+    width: $navbar-width;
     float: left;
 
     ul {
@@ -10,6 +10,7 @@
     &__nav-title {
         color: $color-text-primary-light;
         display: block;
+        font-weight: 300;
         padding: 3rem 0.25rem 0 1rem;
         text-transform: uppercase;
     }
@@ -30,6 +31,7 @@
         a {
             cursor: pointer;
             display: block;
+            font-weight: 300;
             text-decoration: none;
             padding: 0.25rem 1rem;
             transition: backround-color 0.3s, border-left 0.3s, padding-left 0.3s;
