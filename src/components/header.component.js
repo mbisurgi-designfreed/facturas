@@ -1,13 +1,16 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
-const Header = ({ history }) => {
+import { signout } from '../actions/auth.action';
+
+const Header = ({ history, signout }) => {
     const onDashboardClicked = () => {
         history.push('/dashboard');
     };
 
     const onLogoutClicked = () => {
-        history.push('/');
+        signout();
     };
 
     return (
@@ -21,4 +24,4 @@ const Header = ({ history }) => {
     );
 }
 
-export default withRouter(Header);
+export default connect(null, { signout })(withRouter(Header));

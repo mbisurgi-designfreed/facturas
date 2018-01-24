@@ -17,11 +17,18 @@
 
     &__login-input {
         width: 100%;
-        border: 1px solid #ccc;
-        border-radius: 0.5rem;
+        border: none;
+        border-radius: 2px;
         font-size: 1.5rem;
         margin-bottom: 1rem;
         padding: 1rem;
+        border-bottom: 3px solid transparent;
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba($black, 0.1);
+            border-bottom: 3px solid $color-primary-light;
+        }
     }
 
     &__login-button {
@@ -31,9 +38,5 @@
 
     input[type=submit]:focus {
         outline: none;
-    }
-
-    input:focus {
-        outline-color: $color-primary-light;
     }
 }
