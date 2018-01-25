@@ -39,6 +39,9 @@ class Login extends Component {
                         <label className="login-form__login-label">Password</label>
                         <input className="login-form__login-input" type="password" value={this.state.password} onChange={this.onPasswordChanged} />
                     </div>
+                    <div className="row">
+                        <p className="text-error">{this.props.error}</p>
+                    </div>
                     <div className="row login-form__login-button">
                         <input className="btn" type="submit" value="Login" />
                     </div>
