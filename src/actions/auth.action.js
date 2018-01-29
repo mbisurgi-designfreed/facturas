@@ -31,5 +31,9 @@ export const signout = () => {
         dispatch({
             type: 'unauthenticate'
         });
+
+        dispatch({
+            type: 'reset'
+        });
     }
 };

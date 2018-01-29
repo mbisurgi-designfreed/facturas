@@ -6,7 +6,7 @@ import Filters from '../filters.component';
 import ClientesListItem from './clientes-list-item.component';
 
 import { getClientes } from '../../actions/clientes.action';
-import { setTextFilter, searchByRazonSocial, searchByCuit } from '../../actions/clientes-filters.action';
+import { setTextFilter, searchByRazonSocial, searchByCuit, sortByRazonSocial, sortByCuit } from '../../actions/clientes-filters.action';
 
 import clientesSelector from '../../selectors/clientes.selector';
 
@@ -22,6 +22,15 @@ class ClientesList extends Component {
         value: 'cuit',
         label: 'Cuit'
     }];
+
+    onOrderChanged = (selectedOption) => {
+        switch (selectedOption.value) {
+            case 'razonSocial':
+                return this.props.sortByRazonSocial();
+            case 'cuit':
+                return this.props.sortByCuit();
+        }
+    }
 
     onFilterChanged = (selectedOption) => {
         this.props.setTextFilter('');
@@ -49,7 +58,7 @@ class ClientesList extends Component {
             <div>
                 <p className="main__page-title">CLIENTES / listar</p>
                 <div className="container">
-                    <Filters filterValue={this.props.filters.searchBy} textValue={this.props.filters.text} options={this.options} onFilterChange={this.onFilterChanged} onTextChange={this.onTextChanged} />
+                    <Filters sortValue={this.props.filters.sortBy} filterValue={this.props.filters.searchBy} textValue={this.props.filters.text} options={this.options} onFilterChange={this.onFilterChanged} onOrderChange={this.onOrderChanged} onTextChange={this.onTextChanged} />
                     {this.renderItems()}
                 </div>
             </div>
@@ -61,4 +70,4 @@ const mapStateToProps = (state) => {
     return { clientes: clientesSelector(state.clientes.list, state.clientesFilters), filters: state.clientesFilters };
 };
 
-export default connect(mapStateToProps, { getClientes, setTextFilter, searchByRazonSocial, searchByCuit })(ClientesList);
+export default connect(mapStateToProps, { getClientes, setTextFilter, searchByRazonSocial, searchByCuit, sortByCuit, sortByRazonSocial })(ClientesList);
