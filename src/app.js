@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 
+import 'react-select/dist/react-select.css';
 import './styles/styles.scss';
 
 import configureStore from './store/configureStore';

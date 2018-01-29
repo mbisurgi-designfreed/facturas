@@ -9,7 +9,7 @@ import authenticateRoute from '../hoc/authenticateRoute.hoc';
 
 const AppRouter = () => (
     <BrowserRouter>
-        <div className="container">
+        <div>
             <Route path="/" exact component={Home} />
             <Route path="/login" component={Login} />
             <Route path="/dashboard" component={authenticateRoute(MainLayout)} />
